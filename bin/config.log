@@ -1,0 +1,285 @@
+# project ndnpaxos (0.1) configured on Mon Mar 29 03:43:06 2021 by
+# waf 1.7.13 (abi 98, python 20711f0 on linux2)
+# using ./waf configure -l trace
+#
+----------------------------------------
+Setting top to
+/home/node/naxos
+----------------------------------------
+Setting out to
+/home/node/naxos/bin
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths='' var='CXX' -> 'clang++'
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/snap/bin'] var='AR' -> '/usr/bin/ar'
+clang++
+----------------------------------------
+Checking for program pkg-config
+/usr/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/snap/bin'] var='PKGCONFIG' -> '/usr/bin/pkg-config'
+----------------------------------------
+Checking for 'protobuf'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'protobuf']
+out: -pthread -lprotobuf -pthread -lpthread
+
+yes
+----------------------------------------
+Checking for program protoc
+/usr/bin/protoc
+find program=['protoc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/snap/bin'] var='PROTOC' -> '/usr/bin/protoc'
+----------------------------------------
+Checking for 'yaml-cpp'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'yaml-cpp']
+out: -lyaml-cpp
+
+yes
+----------------------------------------
+Checking for 'sqlite3'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'sqlite3']
+out: -lsqlite3
+
+yes
+----------------------------------------
+Checking for 'libndn-cxx'
+['/usr/bin/pkg-config', '--cflags', '--libs', 'libndn-cxx']
+out: -I/usr/local/include -L/usr/local/lib -lndn-cxx -lboost_system -lboost_filesystem -lboost_date_time -lboost_iostreams -lboost_regex -lboost_program_options -lboost_chrono -lboost_random -lcryptopp -lsqlite3 -lrt -lpthread
+
+yes
+----------------------------------------
+Checking boost includes
+1.65.1
+----------------------------------------
+Checking boost libs
+Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
+    /usr/lib/x86_64-linux-gnu/libboost_atomic.a
+    /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+    /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_chrono.a
+    /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+    /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_container.a
+    /usr/lib/x86_64-linux-gnu/libboost_container.so
+    /usr/lib/x86_64-linux-gnu/libboost_container.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_context.a
+    /usr/lib/x86_64-linux-gnu/libboost_context.so
+    /usr/lib/x86_64-linux-gnu/libboost_context.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_coroutine.a
+    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so
+    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.a
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_exception.a
+    /usr/lib/x86_64-linux-gnu/libboost_fiber.a
+    /usr/lib/x86_64-linux-gnu/libboost_fiber.so
+    /usr/lib/x86_64-linux-gnu/libboost_fiber.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_graph.a
+    /usr/lib/x86_64-linux-gnu/libboost_graph.so
+    /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.a
+    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so
+    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.a
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_locale.a
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_log.a
+    /usr/lib/x86_64-linux-gnu/libboost_log.so
+    /usr/lib/x86_64-linux-gnu/libboost_log.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_log_setup.a
+    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so
+    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.a
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so
+    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_mpi.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py27.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py27.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py27.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py36.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python-py36.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python3-py36.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python3-py36.so
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python3-py36.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python3.a
+    /usr/lib/x86_64-linux-gnu/libboost_mpi_python3.so
+    /usr/lib/x86_64-linux-gnu/libboost_numpy-py27.a
+    /usr/lib/x86_64-linux-gnu/libboost_numpy-py27.so
+    /usr/lib/x86_64-linux-gnu/libboost_numpy-py27.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_numpy.a
+    /usr/lib/x86_64-linux-gnu/libboost_numpy.so
+    /usr/lib/x86_64-linux-gnu/libboost_numpy3-py36.a
+    /usr/lib/x86_64-linux-gnu/libboost_numpy3-py36.so
+    /usr/lib/x86_64-linux-gnu/libboost_numpy3-py36.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_numpy3.a
+    /usr/lib/x86_64-linux-gnu/libboost_numpy3.so
+    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.a
+    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so
+    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_program_options.a
+    /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+    /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_python-py27.a
+    /usr/lib/x86_64-linux-gnu/libboost_python-py27.so
+    /usr/lib/x86_64-linux-gnu/libboost_python-py27.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_python-py36.a
+    /usr/lib/x86_64-linux-gnu/libboost_python-py36.so
+    /usr/lib/x86_64-linux-gnu/libboost_python.a
+    /usr/lib/x86_64-linux-gnu/libboost_python.so
+    /usr/lib/x86_64-linux-gnu/libboost_python3-py36.a
+    /usr/lib/x86_64-linux-gnu/libboost_python3-py36.so
+    /usr/lib/x86_64-linux-gnu/libboost_python3-py36.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_python3.a
+    /usr/lib/x86_64-linux-gnu/libboost_python3.so
+    /usr/lib/x86_64-linux-gnu/libboost_random.a
+    /usr/lib/x86_64-linux-gnu/libboost_random.so
+    /usr/lib/x86_64-linux-gnu/libboost_random.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_regex.a
+    /usr/lib/x86_64-linux-gnu/libboost_regex.so
+    /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_serialization.a
+    /usr/lib/x86_64-linux-gnu/libboost_serialization.so
+    /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_signals.a
+    /usr/lib/x86_64-linux-gnu/libboost_signals.so
+    /usr/lib/x86_64-linux-gnu/libboost_signals.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.a
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.a
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.a
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.a
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so
+    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_system.a
+    /usr/lib/x86_64-linux-gnu/libboost_system.so
+    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_test_exec_monitor.a
+    /usr/lib/x86_64-linux-gnu/libboost_thread.a
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_timer.a
+    /usr/lib/x86_64-linux-gnu/libboost_timer.so
+    /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.a
+    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so
+    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a
+    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
+    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_wave.a
+    /usr/lib/x86_64-linux-gnu/libboost_wave.so
+    /usr/lib/x86_64-linux-gnu/libboost_wave.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_wserialization.a
+    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so
+    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so.1.65.1
+Trying pattern boost_system(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_system(-1_65_1)+
+Trying pattern boost_system(-1_65_1)+
+Trying pattern boost_system(-gcc[0-9]{0,3})+
+Trying pattern boost_system
+Found boost lib libboost_system.a
+Trying pattern boost_filesystem(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_filesystem(-1_65_1)+
+Trying pattern boost_filesystem(-1_65_1)+
+Trying pattern boost_filesystem(-gcc[0-9]{0,3})+
+Trying pattern boost_filesystem
+Found boost lib libboost_filesystem.a
+Trying pattern boost_date_time(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_date_time(-1_65_1)+
+Trying pattern boost_date_time(-1_65_1)+
+Trying pattern boost_date_time(-gcc[0-9]{0,3})+
+Trying pattern boost_date_time
+Found boost lib libboost_date_time.a
+Trying pattern boost_iostreams(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_iostreams(-1_65_1)+
+Trying pattern boost_iostreams(-1_65_1)+
+Trying pattern boost_iostreams(-gcc[0-9]{0,3})+
+Trying pattern boost_iostreams
+Found boost lib libboost_iostreams.a
+Trying pattern boost_thread(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_thread(-1_65_1)+
+Trying pattern boost_thread(-1_65_1)+
+Trying pattern boost_thread(-gcc[0-9]{0,3})+
+Trying pattern boost_thread
+Found boost lib libboost_thread.a
+Trying pattern boost_regex(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_regex(-1_65_1)+
+Trying pattern boost_regex(-1_65_1)+
+Trying pattern boost_regex(-gcc[0-9]{0,3})+
+Trying pattern boost_regex
+Found boost lib libboost_regex.a
+Trying pattern boost_program_options(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_program_options(-1_65_1)+
+Trying pattern boost_program_options(-1_65_1)+
+Trying pattern boost_program_options(-gcc[0-9]{0,3})+
+Trying pattern boost_program_options
+Found boost lib libboost_program_options.a
+Trying pattern boost_chrono(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_chrono(-1_65_1)+
+Trying pattern boost_chrono(-1_65_1)+
+Trying pattern boost_chrono(-gcc[0-9]{0,3})+
+Trying pattern boost_chrono
+Found boost lib libboost_chrono.a
+Trying pattern boost_random(-gcc[0-9]{0,3})+(-1_65_1)+
+Trying pattern boost_random(-1_65_1)+
+Trying pattern boost_random(-1_65_1)+
+Trying pattern boost_random(-gcc[0-9]{0,3})+
+Trying pattern boost_random
+Found boost lib libboost_random.a
+ok
+----------------------------------------
+Checking for boost linkage
+==>
+
+#include <boost/system/error_code.hpp>
+int main() { boost::system::error_code c; }
+
+<==
+[1/2] [32mcxx: bin/.conf_check_0e263e90c2449d9643fa57931cb06d6d/test.cpp -> bin/.conf_check_0e263e90c2449d9643fa57931cb06d6d/testbuild/test.cpp.1.o
+[0m
+['clang++', '-fPIC', '-Wall', '-O2', '-pthread', '-DLOG_LEVEL=6', '-std=c++0x', '-I/usr/include', '-DHAVE_PROTOBUF=1', '-DHAVE_YAML_CPP=1', '-DHAVE_SQLITE3=1', '-DHAVE_NDN_CXX=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: bin/.conf_check_0e263e90c2449d9643fa57931cb06d6d/testbuild/test.cpp.1.o -> bin/.conf_check_0e263e90c2449d9643fa57931cb06d6d/testbuild/testprog
+[0m
+['clang++', '-fPIC', 'test.cpp.1.o', '-o', '/home/node/naxos/bin/.conf_check_0e263e90c2449d9643fa57931cb06d6d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_filesystem', '-lboost_date_time', '-lboost_iostreams', '-lboost_thread', '-lboost_regex', '-lboost_program_options', '-lboost_chrono', '-lboost_random']
+==>
+
+#include <boost/thread.hpp>
+int main() { boost::thread t; }
+
+<==
+[1/2] [32mcxx: bin/.conf_check_baf510d34467f674d2f5cb6e69508542/test.cpp -> bin/.conf_check_baf510d34467f674d2f5cb6e69508542/testbuild/test.cpp.1.o
+[0m
+['clang++', '-fPIC', '-Wall', '-O2', '-pthread', '-DLOG_LEVEL=6', '-std=c++0x', '-I/usr/include', '-DHAVE_PROTOBUF=1', '-DHAVE_YAML_CPP=1', '-DHAVE_SQLITE3=1', '-DHAVE_NDN_CXX=1', '../test.cpp', '-c', '-o', 'test.cpp.1.o']
+[2/2] [33mcxxprogram: bin/.conf_check_baf510d34467f674d2f5cb6e69508542/testbuild/test.cpp.1.o -> bin/.conf_check_baf510d34467f674d2f5cb6e69508542/testbuild/testprog
+[0m
+['clang++', '-fPIC', 'test.cpp.1.o', '-o', '/home/node/naxos/bin/.conf_check_baf510d34467f674d2f5cb6e69508542/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_filesystem', '-lboost_date_time', '-lboost_iostreams', '-lboost_thread', '-lboost_regex', '-lboost_program_options', '-lboost_chrono', '-lboost_random']
+ok
